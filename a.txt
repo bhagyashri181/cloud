@@ -1,0 +1,167 @@
+DAY 2 ex7
+# tuple - constant array and created using()
+# tuple element can not be modified
+# single element tuple needs a trainling comma
+
+t1 = (10,20,'world','cherry','kiwi',30)
+print(t1)
+
+t2 = 45,28,"hello"
+
+print(type(t2))
+<class 'tuple'>    run
+
+print(t2)  run
+
+print(t1.index('kiwi'))
+
+
+EX8
+
+#dict - key and value pairs. 
+d1 = {'name':'alice','age':7,'class':'first'}
+print(d1)
+
+# repeating a key is not an error, the last pair of key and value will overwrite the previous one
+d1 = {'name':'alice','age':7,'class':'first','name':'bob'} # the value for the key 'name' will be bob
+print(d1)   run
+
+
+
+EX9
+Iteration in dictionary
+
+iterate over the dictionary
+
+
+EX 10 
+
+Get in dictionary
+setdefault 
+
+EX 11
+DIct
+zip
+
+DAY 3
+
+EX 1 SET
+# set is same as list but without duplicates
+s1 = set([10,20,30,20,30,20,40,50,60])
+print(s1)
+
+EX2
+FUNCTIONS IN PYTHON
+
+DEF
+
+
+Problem 8
+This line imports the random module in Python, which provides various functions for generating random numbers.
+
+
+Here, a string named alphabet is defined, which contains a set of characters.
+This string seems to represent the characters that can be used in the encryption and decryption processes.
+
+This line defines a function named makeKey which takes alphabet as a parameter.
+
+Within the makeKey function, the alphabet string is converted into a list using the list() function. 
+This will make it easier to shuffle the characters.
+
+Here, the random.shuffle() function is called with alphabet as an argument. This function shuffles the elements of the list alphabet in place.
+ However, it's important to note that random.shuffle() doesn't return anything (or rather, it returns None). So, key will be assigned None.
+
+After shuffling, the alphabet list is converted back to a string using the str() function. However,
+ this line seems unnecessary because key is assigned None, and alphabet is already a string.
+
+Finally, the makeKey function returns the shuffled key.
+
+This line defines another function named encrypt which takes three parameters: plaintext, key, and alphabet.
+
+This is a docstring which briefly explains what the encrypt function does.
+
+
+This line encrypts the plaintext using the key and returns the ciphertext.
+ It iterates over each character l in plaintext and retrieves the corresponding character from key, forming a new string.
+
+
+Finally, the print statement prints out the alphabet string. However, this line seems to be 
+separate from the rest of the code and doesn't contribute to the encryption process. 
+It may have been added for debugging purposes or testing.
+
+
+
+problem 7
+
+This line initializes a list named original_list containing some integers.
+
+This line uses a list comprehension to create a new list named new_list. It iterates over each element (num) in original_list and 
+adds 5 to it only if 
+the element is less than 45.
+ The result is a list containing the elements from original_list that are less than 45, each incremented by 5.
+
+
+Finally, this line prints the new_list to the console, s
+howing the result of the list comprehension. 
+It will contain elements from original_list less than 45, each incremented by 5.
+
+
+Problem 6
+This line is a multi-line comment enclosed within triple quotes.
+ It provides an instruction or description of what the code is intended to do, 
+which is to write a list comprehension to select words with only three characters from a given text.
+ However, this comment doesn't have any impact on the execution of the code.
+
+Here, a list named fruits is defined, containing several string elements, each representing the name of a fruit.
+
+An empty list named newlist is initialized. This list will be used to store the selected words from fruits.
+
+This for loop iterates over each element x in the fruits list. For each element,
+ it checks if the letter "a" is present in the word (if "a" in x). If it is, the word x is appended to the newlist.
+
+Finally, this line prints the newlist to the console, displaying the words from fruits that contain the letter "a".
+ However, the code provided in the comment doesn't match the code below it. The comment suggests selecting words with only three characters, 
+but the actual code selects words containing the letter "a".
+
+
+
+
+gitlab
+
+git config --global user.name "b80user32"
+git config --global user.email "b80user32@rpsconsulting.in"
+git init
+
+
+copy it from the page push existing folder
+git remote add origin http://gitlab.rpsconsulting.in:8929/b80user32/project1.git
+replace
+git remote add origin http://10.10.16.125:8929/b80user32/project1.git
+
+git remote add origin http://10.10.16.125:8929/b80user32/project1.git
+
+3 commands
+
+git add .
+git commit -m "initial commit"
+git push -u origin master
+
+give username and password
+
+
+same for add new file in same folder only write 3 commands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

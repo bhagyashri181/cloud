@@ -1,0 +1,40 @@
+Task 3: Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort algorithm. Provide a brief explanation of how the algorithm works and a simple array of integers to demonstrate a dry run of your algorithm.
+
+
+
+Solution: Bubble Sort Algorithm
+Pseudocode:
+Function bubbleSort(arr):
+    n = length of arr
+    for i from 0 to n - 1:        // Loop through each element
+        for j from 0 to n - i - 1:    // Loop through unsorted part of the array
+            if arr[j] > arr[j + 1]:   // Compare adjacent elements
+                swap arr[j] and arr[j + 1]  // Swap if necessary
+Explanation in Easy Terms:
+Step 1: Start from the beginning of the list.
+Step 2: Compare the first two numbers. If the first one is bigger, swap them.
+Step 3: Move one step forward and compare the next two numbers. Again, if the first one is bigger, swap them.
+Step 4: Keep doing this until you reach the end of the list.
+Step 5: Now, the biggest number is at the end of the list.
+Step 6: Repeat the process for the unsorted part of the list (all elements except the last one).
+Step 7: Keep doing this until the whole list is sorted.
+Flowchart:
+
+Example:
+Let's sort the array [5, 2, 9, 1, 6].
+
+Pass 1:
+Compare 5 and 2. Swap. [2, 5, 9, 1, 6]
+Compare 5 and 9. No swap. [2, 5, 9, 1, 6]
+Compare 9 and 1. Swap. [2, 5, 1, 9, 6]
+Compare 9 and 6. Swap. [2, 5, 1, 6, 9]
+Pass 2:
+Compare 2 and 5. No swap. [2, 5, 1, 6, 9]
+Compare 5 and 1. Swap. [2, 1, 5, 6, 9]
+Compare 5 and 6. No swap. [2, 1, 5, 6, 9]
+Pass 3:
+Compare 2 and 1. Swap. [1, 2, 5, 6, 9]
+Compare 2 and 5. No swap. [1, 2, 5, 6, 9]
+Pass 4:
+Compare 1 and 2. No swap. [1, 2, 5, 6, 9]
+The array is now sorted: [1, 2, 5, 6, 9].

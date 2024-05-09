@@ -1,0 +1,8 @@
+DEBUG:sample-logger:this is a debug log
+INFO:sample-logger:this is a info log
+WARNING:sample-logger:this is a warning log
+CRITICAL:sample-logger:this is a critical log
+DEBUG:sample-logger:this is a debug log
+INFO:sample-logger:this is a info log
+WARNING:sample-logger:this is a warning log
+CRITICAL:sample-logger:this is a critical log

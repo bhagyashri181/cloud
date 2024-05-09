@@ -1,0 +1,28 @@
+Task 1: Flowchart Creation - Design a flowchart that outlines the logic for a user login process. It should include conditional paths for successful and unsuccessful login attempts, and a loop that allows a user three attempts before locking the account.
+
+Solution: Flowchart for User Login Process
+Flowchart:
+
+Start
+
+Input username and password
+
+If username and password are correct:
+    Display "Login successful"
+    End
+Else:
+    Increment login attempts
+    If login attempts < 3:
+        Display "Incorrect username or password. Please try again."
+        Go back to Input username and password
+    Else:
+        Display "Maximum login attempts reached. Account locked."
+        End
+
+End
+Explanation:
+The user is prompted to input their username and password.
+If the username and password match, the login is successful.
+If not, the system checks the number of login attempts.
+If the attempts are less than 3, the user is prompted again.
+If attempts reach 3, the account is locked.

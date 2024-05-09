@@ -1,0 +1,26 @@
+Task 2: Function Design and Modularization - Create a document that describes the design of two modular functions: one that returns the factorial of a number, and another that calculates the nth Fibonacci number. Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+
+
+
+
+Solution: Design of Modular Functions
+Factorial Function:
+Function factorial(n):
+    if n equals 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+Fibonacci Function:
+plaintext
+Copy code
+Function fibonacci(n):
+    if n equals 0:
+        return 0
+    else if n equals 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+Explanation:
+Factorial Function: Calculates the factorial of a given number recursively. For instance, factorial(5) = 5 * 4 * 3 * 2 * 1.
+Fibonacci Function: Generates the nth Fibonacci number recursively. For example, fibonacci(5) = 3 (0, 1, 1, 2, 3).
+Modularity helps in code reuse and organization by breaking down complex tasks into smaller, manageable functions. This makes the code easier to understand, maintain, and debug.
