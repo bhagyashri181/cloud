@@ -1,0 +1,21 @@
+Pseudocode Development - Task: Write a detailed pseudocode for a simple program that takes a number as input, calculates the square if it's even or the cube if it's odd, and then outputs the result. Incorporate conditional and looping constructs.
+
+Solution: 1. Start
+ 
+2. Enter a number
+3. Read input number from user and store it in a variable, let's call it "num"
+ 
+4. If num modulo 2 equals 0:
+      5. Set result = num * num  // Calculate square of num
+   Else:
+      6. Set result = num * num * num  // Calculate cube of num
+ 
+7. Output result
+ 
+8. End
+
+
+
+Solution 2:
+
+num = int(input("Enter a number: "))# mod = num % 2if mod > 0:# Print a message indicating that the number is oddprint("This is an odd number.")else:# Print a message indicating that the number is evenprint("This is an even number.")

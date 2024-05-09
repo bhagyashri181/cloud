@@ -1,0 +1,9 @@
+write a list comprehension to generate 100 random numbers 
+
+import random
+
+# Generate 100 random numbers between 1 and 100
+random_numbers = [random.randint(1, 100) for _ in range(100)]
+
+# Print the list of random numbers
+print(random_numbers)

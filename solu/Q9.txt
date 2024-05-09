@@ -1,0 +1,27 @@
+"""Write a program that asks the user to enter a word and determines whether the word is a
+palindrome or not. A palindrome is a word that reads the same backwards as forwards."""
+
+
+Solution
+
+user_word = input("Enter a Word: ")
+#eg kayak
+
+if user_word == user_word[::-1]:
+    print(user_word," Yay this is a palindrome")
+
+else:
+    print(user_word ," Sorry this is not a Palindrome")
+
+
+
+Expalain
+
+1.user_word = input("Enter a Word: "): This line prompts the user to enter a word and stores the input in the variable user_word. The input() function takes user input as a string and assigns it to the variable user_word.
+2.if user_word == user_word[::-1]:: This line checks if the user_word is equal to its reverse. user_word[::-1] uses slicing to reverse the string. If the original word is the same as its reverse, it means it reads the same backwards as forwards, which is a palindrome.
+3.print(user_word," Yay this is a palindrome"): If the condition in the previous line is true (i.e., the word is a palindrome), this line prints a message indicating that the word is a palindrome.
+4.else:: If the condition in line 2 is not true (i.e., the word is not a palindrome), the program executes the code block under the else statement.
+5.print(user_word ," Sorry this is not a Palindrome"): This line prints a message indicating that the word is not a palindrome.
+
+
+So, overall, this program takes a word input from the user, checks if it is a palindrome (reads the same backwards as forwards), and prints an appropriate message based on the result of the check.

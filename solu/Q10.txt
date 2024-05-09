@@ -1,0 +1,25 @@
+"""Write a program that asks the user to enter a number and prints out all the divisors of that
+number. [Hint: the % operator is used to tell if a number is divisible by something."""
+
+
+number = eval(input("Enter a number: "))
+
+for i in range(1,number):
+    if number % i == 0:
+        print( i)
+
+
+
+expl:
+
+1.number = eval(input("Enter a number: ")): This line prompts the user to enter a number and stores the input in the variable number. The input() function takes user input as a string, and eval() evaluates the string as a Python expression, which in this case converts the input string into a number.
+
+
+2.for i in range(1,number):: This line starts a for loop that iterates through each number from 1 up to (but not including) the value stored in the variable number. It assigns each value to the variable i in each iteration.
+
+
+3.f number % i == 0:: This line checks if the number is divisible evenly (with no remainder) by the current value of i. The % operator calculates the remainder of the division operation. If the remainder is 0, it means number is divisible by i.
+
+4.print(i): This line prints out the value of i, which represents one of the divisors of the input number. If the condition in the previous line is met (i.e., number is divisible by i), i will be printed. Each divisor is printed on a separate line.
+
+Overall, this program takes a number from the user, then iterates through all numbers from 1 up to that number (exclusive), checking if each number is a divisor of the input number. If a number is found to be a divisor, it's printed out.

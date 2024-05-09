@@ -1,0 +1,85 @@
+"""For this problem, use the dictionary from the beginning of this chapter whose keys are month
+names and whose values are the number of days in the corresponding months.
+(a) Ask the user to enter a month name and use the dictionary to tell them how many days
+are in the month.
+(b) Print out all of the keys in alphabetical order.
+(c) Print out all of the months with 31 days.
+(d) Print out the (key-value) pairs sorted by the number of days in each month
+(e) Modify the program from part (a) and the dictionary so that the user does not have to
+know how to spell the month name exactly. That is, all they have to do is spell the first
+three letters of the month name correctly.
+"""
+
+
+Solution 
+
+
+import operator
+
+year ={"January":"31","Febuary":"28","March":"30","April":"30","May":"31","June":"30"}
+
+#a
+user_input= input("Enter Name of a month: ")
+#user_input = "March"
+for key, values in year.items():
+     if user_input == key:  #change equality sign to in to answer d
+        print( values)
+        #break
+
+
+#b
+sorted_year ={key:year[key] for key in sorted(year)}
+print(sorted_year.keys())
+
+#c
+for keys,values in year.items():
+    if int(values) == 31:
+
+      print(keys)
+
+#d
+##can sort months by changing itemgetter
+# variable to 0
+sorted_bymonthdays = dict(sorted(year.items(),key= operator.itemgetter(1)))
+print(sorted_bymonthdays)
+
+
+
+
+Explain::
+
+1.import operator: This line imports the operator module, which provides functions that correspond to the standard operators in Python. It's used later in the code for sorting the dictionary by values.
+
+2.year ={"January":"31","Febuary":"28","March":"30","April":"30","May":"31","June":"30"}: This line initializes a dictionary named year where the keys are month names and the values are the number of days in each corresponding month.
+
+3.(a):
+user_input = input("Enter Name of a month: "): This line prompts the user to input the name of a month.
+for key, values in year.items():: This line iterates over the key-value pairs in the year dictionary.
+if user_input == key:: This line checks if the user input matches any of the keys in the dictionary.
+print( values): If there is a match, this line prints the number of days associated with the month.
+
+
+4.(b):
+sorted_year ={key:year[key] for key in sorted(year)}: This line creates a new dictionary sorted_year by iterating over the sorted keys of the year dictionary and adding corresponding key-value pairs to sorted_year.
+print(sorted_year.keys()): This line prints all the keys (month names) of the sorted_year dictionary, which are now in alphabetical order.
+
+5.This part iterates over the year dictionary to find months with 31 days and prints their names.
+
+6.(d):
+sorted_bymonthdays = dict(sorted(year.items(), key=operator.itemgetter(1))): This line sorts the year dictionary by values (number of days in each month) using the sorted function and the operator.itemgetter(1) key function, which sorts based on the second item in each key-value pair (the number of days).
+print(sorted_bymonthdays): This line prints the sorted dictionary.
+
+7.(e):
+The code doesn't directly modify the program from part (a) but gives an idea of how you could modify it. The modification involves allowing the user to input only the first three letters of the month name instead of the full name. This change isn't implemented in the code provided but can be added by modifying the condition where the user input is checked against the keys of the dictionary.
+
+
+
+
+
+
+
+
+
+
+
+

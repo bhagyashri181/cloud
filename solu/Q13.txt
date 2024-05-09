@@ -1,0 +1,53 @@
+"""Dictionaries provide a convenient way to store structured data. Here is an example dictionary:
+d=[{'name':'Todd', 'phone':'555-1414', 'email':'todd@mail.net'},
+{'name':'Helga', 'phone':'555-1618', 'email':'helga@mail.net'},
+{'name':'Princess', 'phone':'555-3141', 'email':''},
+{'name':'LJ', 'phone':'555-2718', 'email':'lj@mail.net'}]
+Write a program that reads through any dictionary like this and prints the following:
+(a) All the users whose phone number ends in an 8
+(b) All the users that don’t have an email address listed
+
+
+"""
+
+solution:
+
+d=[{'name':'Todd', 'phone':'555-1414', 'email':'todd@mail.net'},
+{'name':'Helga', 'phone':'555-1618', 'email':'helga@mail.net'},
+{'name':'Princess', 'phone':'555-3141', 'email':''},
+{'name':'LJ', 'phone':'555-2718', 'email':'lj@mail.net'}]
+
+
+for dict  in  range(len(d)):
+    #print(d[dict])
+     dd =d[dict ]
+     for keys,values in dd.items():
+         #print(keys,values)
+         if keys == "phone" and values[-1] == "8":
+             print(dd)
+         if keys == "email" and values =='':
+            print(dd)
+
+
+
+Explain:
+1.d=[{'name':'Todd', 'phone':'555-1414', 'email':'todd@mail.net'}, ...]: This line initializes a list d containing dictionaries, where each dictionary represents a user with keys 'name', 'phone', and 'email'.
+2.for dict in range(len(d)):: This line starts a loop iterating over the indices of the list d.
+3.dd = d[dict]: This line retrieves the dictionary at the current index and assigns it to the variable dd.
+4.for keys, values in dd.items():: This line starts a loop iterating over the key-value pairs in the dictionary dd.
+5.if keys == "phone" and values[-1] == "8":: This line checks if the current key is "phone" and if the last character of the phone number (values) is "8".
+6.print(dd): This line prints the dictionary dd if the phone number ends with "8".
+7.if keys == "email" and values == '':: This line checks if the current key is "email" and if the value is an empty string (indicating no email address).
+8.print(dd): This line prints the dictionary dd if the email address is not listed.
+
+
+So, overall, this program iterates through each dictionary in the list d, checks for specific conditions regarding phone numbers ending in "8" and empty
+
+
+
+
+
+
+
+
+

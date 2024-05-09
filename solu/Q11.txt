@@ -1,0 +1,40 @@
+"""An anagram of a word is a word that is created by rearranging the letters of the original.
+For instance, two anagrams of idle are deli and lied. Finding anagrams that are real words is
+beyond our reach until Chapter 12.
+
+Instead, write a program that asks the user for a string
+and returns a random anagram of the string—in other words, a random rearrangement of the
+letters of that string."""
+
+solution:
+
+from random import shuffle
+word = input('Enter a word: ')
+new_word = list(word)
+shuffle(new_word)
+new_word_2 = ''.join(new_word)
+print(new_word_2)
+
+
+Explain
+1.from random import shuffle: This line imports the shuffle function from the random module. The shuffle function is used to randomly shuffle the elements of a list.
+2.word = input('Enter a word: '): This line prompts the user to enter a word and stores the input in the variable word.
+3.new_word = list(word): This line converts the input word into a list of its characters. This step is necessary because the shuffle function works with lists, not strings.
+4.shuffle(new_word): This line shuffles the list of characters randomly. After this line executes, the elements of new_word will be in a random order.
+5.new_word_2 = ''.join(new_word): This line joins the shuffled characters back into a single string. The join function concatenates each element of the list new_word into a single string, with an empty string '' between each character. This effectively creates a new string with the characters rearranged randomly.
+6.print(new_word_2): This line prints the randomly rearranged string, which is the random anagram of the original word entered by the user.
+
+
+
+So, in summary, this program takes a word input from the user, shuffles its characters to create a random anagram, and then prints the result.
+
+
+
+
+
+
+
+
+
+
+

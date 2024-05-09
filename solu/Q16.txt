@@ -1,0 +1,128 @@
+"""
+Write a program that gets a string from the user containing a potential telephone number.
+The program should print Valid if it decides the phone number is a real phone number, and
+Invalid otherwise. A phone number is considered valid as long as it is written in the form
+abc-def-hijk or 1-abc-def-hijk. The dashes must be included, the phone number should contain
+only numbers and dashes, and the number of digits in each group must be correct.
+"""
+solution:
+
+
+def validate_input(message):
+    valid = False
+    while not valid:
+        user_input = input(message)
+        num = user_input.split('-')
+        try:
+            if (len(num[0]) == 1) and (len(num[1]) == 3) and (len(num[2]) == 3) and (len(num[3]) == 4):
+                valid = True
+            elif (len(num[0]) == 3) and (len(num[1]) == 3) and (len(num[2]) == 4):
+                valid = True
+            else:
+                print('Your format is off. Please enter a valid phone number.')
+        except IndexError:
+            print('A phone number was not inputted.')
+    return user_input
+
+def main():
+    print('Welcome to Phone Number Validation.\n')
+    print('The phone number format is 1-ABC-DEF-GHIJ or ABC-DEF-GHIJ.')
+    message = 'Enter a valid phone number: '
+    valid_num = validate_input(message)
+    print(f'\nThe number, {valid_num}, is valid.')
+
+if __name__ == '__main__':
+    main()
+
+
+
+Explain:
+
+1.def validate_input(message):
+This line defines a function named validate_input that takes one parameter, message.
+
+2.valid = False
+This initializes a variable valid to False. It will be used to control the validation loop.
+
+3.while not valid:
+This starts a while loop that continues until valid becomes True.
+
+4.user_input = input(message)
+This line prompts the user with the message provided as an argument and waits for input. It assigns the input to the variable user_input.
+
+5.num = user_input.split('-')
+This splits the user_input string into a list called num, using the dash '-' as a separator.
+
+6.try:
+This begins a try block to handle potential errors in the following code.
+
+7.if (len(num[0]) == 1) and (len(num[1]) == 3) and (len(num[2]) == 3) and (len(num[3]) == 4):
+This checks if the lengths of the elements in the num list match the pattern for a valid phone number: 1 digit, 3 digits, 3 digits, and 4 digits respectively.
+
+8.valid = True
+If the conditions in the if statement are met, valid is set to True, which will end the while loop.
+
+9.elif (len(num[0]) == 3) and (len(num[1]) == 3) and (len(num[2]) == 4):
+This checks for the alternate valid pattern: 3 digits, 3 digits, and 4 digits respectively.
+
+10.else:
+This is the else block for the try block, meaning if any of the conditions above are not met, this block executes.
+
+11.print('Your format is off. Please enter a valid phone number.')
+This line prints a message informing the user that the entered phone number format is incorrect.
+
+12.except IndexError:
+This except block catches an IndexError exception that may occur if the user input doesn't contain enough dashes to split into the required number of parts.
+
+13.print('A phone number was not inputted.')
+This line informs the user that they did not input a phone number.
+
+14.return user_input
+This returns the validated phone number inputted by the user.
+
+15.def main():
+This line defines the main function of the program.
+
+16.print('Welcome to Phone Number Validation.\n')
+This line prints a welcome message.
+
+17.print('The phone number format is 1-ABC-DEF-GHIJ or ABC-DEF-GHIJ.')
+This line informs the user about the required phone number format.
+
+18.message = 'Enter a valid phone number: '
+This line assigns the message to be displayed to the user when asking for input.
+
+19.valid_num = validate_input(message)
+This line calls the validate_input function to get a validated phone number input from the user.
+
+20.print(f'\nThe number, {valid_num}, is valid.')
+This line prints the validated phone number along with a message confirming its validity.
+
+21.if __name__ == '__main__':
+This checks whether the script is being run directly as the main program.
+
+22.main()
+This line calls the main function if the script is run directly.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
